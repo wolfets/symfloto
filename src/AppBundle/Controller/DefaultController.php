@@ -10,11 +10,13 @@ class DefaultController extends Controller
 {
     /**
      * @Route("/")
+     * @Route("/{id}")
      * @Route("/app/example", name="homepage")
      * @Template()
      */
-    public function indexAction()
+    public function indexAction($id = '')
     {
-        return $this->render('default/index.html.twig', array('hello'=>'Bonjour....'));
+    	
+        return $this->render('default/index.html.twig', array('hello'=>'Bonjour....', 'id'=>$id));
     }
 }
