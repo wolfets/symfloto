@@ -12,5 +12,15 @@ use Doctrine\ORM\EntityRepository;
  */
 class ArticleRepository extends EntityRepository
 {
-	List articles = new Array();
+	//http://stackoverflow.com/questions/8146461/custom-repository-class-in-symfony2
+	
+	public function getArticles(){
+		$articles = array(
+				array('titre'=>"article 1", 'contenu'=>"blablabla"),
+				array('titre'=>"article 2", 'contenu'=>"nanani"),
+				array('titre'=>"article 3", 'contenu'=>"lalala")
+				 
+		);
+		return $articles;
+	}
 }
