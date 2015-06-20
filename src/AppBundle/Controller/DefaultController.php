@@ -30,10 +30,10 @@ class DefaultController extends Controller
     			array('titre'=>"article 3", 'contenu'=>"lalala")
     			);
     	
-    	//$em = $this->getDoctrine()->getManagers()->getRepository('AppBundle:Article');
+    	$em = $this->getDoctrine()->getManagers()->getRepository('AppBundle:Article');
     				
-         return $this->render('default/index.html.twig', array('hello'=>'Bonjour....', 'id'=>$id, 'articles'=>$articles));
-    	//return array('hello'=>'Bonjour....', 'id'=>$id, 'articles'=>$articles);
+         //return $this->render('default/index.html.twig', array('hello'=>'Bonjour....', 'id'=>$id, 'articles'=>$articles));
+    	return array('hello'=>'Bonjour....', 'id'=>$id, 'articles'=>$articles);
     	 
     }
 }
